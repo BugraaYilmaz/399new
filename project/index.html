@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/app.css" />
+    <title>Yeni Personel Bildirim Formu</title>
+    <script src="assets\scripts\jquery.js" defer></script>
+    <script src="assets\scripts\app.js" defer></script>
+  </head>
+  <body>
+  <div class="backdrop invisible">
+    </div>
+  
+    
+    
+    <div class="popup invisible">
+      <img src="assets\approved-g1eec46162_1280.png" class="img2">
+      <p class="txt2">Entered Values Are Successfully Submitted!</p>
+      <button class="popup-button">OK</button>
+    </div>
+    <div class="popup2 invisible">
+      <img src="assets\red-g1dbf139ca_1920.png" class="img2">
+      <p class="txt2" id="errorPopupText">Error! Entered values Can't be Submitted!</p>
+      <button class="popup-button2">OK</button>
+    </div>
+    <article class="tbl">
+      <table>
+        <tr>
+          <td class="box">Adı Soyadı:</td>
+          <td colspan="2" contenteditable="true"></td>
+          <td class="box">T.C. Kimlik No:</td>
+          <td colspan="2" contenteditable="true"></td>
+        </tr>
+        <tr>
+          <td class="box">Sicil Numarası:</td>
+          <td colspan="2" contenteditable="true"></td>
+          <td class="box">İşe giriş Tarihi:</td>
+          <td colspan="2"><input type="date" id="date"></td>
+        </tr>
+        <tr>
+          <td class="box">İmzası:</td>
+          <td colspan="4" contenteditable="true"></td>
+        </tr>
+        <tr>
+          <td class="box">Grubu/Birimi:</td>
+          <td colspan="4" contenteditable="true"></td>
+        </tr>
+        <tr>
+          <td class="box">Kadrosu/Unvanı:</td>
+          <td><input type="radio" name="group1" /> Araştrımacı</td>
+          <td><input type="radio" name="group1" /> Teknisyen</td>
+          <td><input type="radio" name="group1" /> İdari</td>
+          <td><input type="radio" name="group1" /> Diğer:<input type="search"></td>
+        </tr>
+        <tr>
+          <td class="box">
+            Sendika Durumu:
+            <p class="pT">Kadro Durumu:</p>
+          </td>
+          <td><input type="radio" name="group2" /> Sendikalı</td>
+          <td><input type="radio" name="group2" /> Kadrolu</td>
+          <td><input type="radio" name="group2" /> Sendikalı Değil</td>
+          <td><input type="radio" name="group2" /> Proje Personeli</td>
+        </tr>
+      </table>
+    </article>
+    <article class="table2">
+      <table>
+        <tr>
+          <td class="ld" colspan="5">
+            <em>Grup Lideri/Birim Amiri Tarafından Doldurulacaktır</em>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1" class="box">Görev Alacağı Proje(ler):</td>
+          <td colspan="4" contenteditable="true"></td>
+        </tr>
+        <tr>
+          <td rowspan="2">Telefon Bağlantı Talebi:</td>
+          <td rowspan="2"><input type="radio" name="group3"/>Yok</td>
+          <td rowspan="2"><input type="radio" name="group3"/>Var</td>
+          <td colspan="2" class="boxe ld">
+            <u
+              >Tesis İşletme Birimi tarafından doldurulacaktır </u
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>Verilen Telefon Numarası: <input type="search" class="telSearch" /></td>
+        </tr>
+        <tr>
+          <td rowspan="2">Etki Alanı Kullanıcı Hesabı:</td>
+          <td rowspan="2"><input type="radio" name="group4"/>Açılmayacak</td>
+          <td rowspan="2"><input type="radio" name="group4"/>Açılacak</td>
+          <td colspan="2" class="ld">
+            <u
+              >Bilgi Teknolojileri Grubu tarafından doldurulacaktır </u
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>Açılan kullanıcı adı: <input type="search" class="uNS" /></td>
+        </tr>
+        <tr>
+          <td>İç E-posta Hesabı:</td>
+          <td><input type="radio" name="group5"/>Açılmayacak</td>
+          <td><input type="radio" name="group5"/>Açılacak</td>
+          <td>Açılan E-posta adresi: <input type="search" class="ic"/></td>
+        </tr>
+        <tr>
+          <td>Dış E-posta Hesabı:</td>
+          <td><input type="radio" name="group6"/>Açılmayacak</td>
+          <td><input type="radio" name="group6"/>Açılacak</td>
+          <td>Açılan E-posta adresi: <input type="search" class="dis"/></td>
+        </tr>
+        <tr>
+          <td>YBS Hesabı:</td>
+          <td><input type="radio" name="group7"/>Açılmayacak</td>
+          <td><input type="radio" name="group7"/>Açılacak</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>EBYS Hesabı:</td>
+          <td><input type="radio" name="group8"/>Açılmayacak</td>
+          <td><input type="radio" name="group8"/>Açılacak</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            Grup/Birim Listesi dışında üye yapılması istenen e-posta listeleri:
+          </td>
+          <td colspan="3">
+            (Proje Listeleri için Proje Yöneticisinin onayı gerekmektedir.)
+          </td>
+        </tr>
+      </table>
+    </article>
+    <article>
+      <table class="table2">
+        <tr>
+          <td colspan="3" class="ld">
+            <em>Ayniyat ve Stok Kontrol Birimi</em>
+          </td>
+        </tr>
+        <tr>
+          <td class="special">Veri Tabanına Giriş Durumu:</td>
+          <td><input type="radio" name="group9"/>Giriş Yapıldı</td>
+          <td><input type="radio" name="group9"/>Giriş Yapılmadı</td>
+        </tr>
+      </table>
+    </article>
+    <article>
+      <table class="table2">
+        <tr>
+          <td colspan="3" class="ld"><em>Grup Lideri</em></td>
+        </tr>
+        <tr>
+          <td class="special">Kişi Güvenlik Belgesi:</td>
+          <td><input type="radio" name="group10"/>Gerekiyor</td>
+          <td><input type="radio" name="group10"/>Gerekmiyor</td>
+        </tr>
+      </table>
+    </article>
+    <article>
+      <table class="table2">
+        <tr>
+          <td class="ld" colspan="4">
+            <em
+              >Tesis Güvenlik Koordinatörü Tarafından Doldurulacaktır</em
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>El Yazısı:</td>
+          <td><input type="radio" name="group11"/>Alındı</td>
+          <td><input type="radio" name="group11"/>Alınmadı</td>
+          <td id="ebs">İmza: <input type="search" class="src"></td>
+        </tr>
+        <tr>
+          <td>Kişi Güvenlik Belgesi:</td>
+          <td colspan="2">
+            <input type="checkbox" class="girisim" />Girişimlere başlandı.(Belge gerekiyor ise)
+          </td>
+          <td id="ebs">İmza: <input type="search" class="src"></td>
+        </tr>
+      </table>
+    </article>
+    <article>
+      <table class="table2">
+        <tr>
+          <td class="ld" colspan="4"><em>Enstitü Oryantasyon</em></td>
+        </tr>
+        <tr>
+          <td class="box">Eğitim ve Kaynak Yönetimi Grubu:</td>
+          <td><input type="radio" name="group12" />Alındı</td>
+          <td><input type="radio" name="group12" />Alınmadı</td>
+          <td id="ebs">İmza: <input type="search" class="src"></td>
+        </tr>
+        <tr>
+          <td>Grup/Birim Eğitimi(İlk Amiri):</td>
+          <td><input type="radio" name="group13"/>Alındı</td>
+          <td><input type="radio" name="group13"/>Alınmadı</td>
+          <td id="ebs">İmza: <input type="search" class="src"></td>
+        </tr>
+      </table>
+    </article>
+    <p>
+      <u
+        >*Grup Lideri/Birim Amiri tarafından onaylandıktan sonra form İnsan
+        Kaynakları birimine iletilir.</u
+      >
+    </p>
+    <button class="aplyBtn" id="apl" >Apply</button>
+    <button class="dltInpBtn">Delete Inputs</button>
+    <footer class="fSpecial">
+    </footer>
+    
+  </body>
+</html>
